@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anna-Maria | Hospitality Professional</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep-burgundy: #4C1208;
+      --dark-red: #7B1D26;
+      --warm-rose: #893A49;
+      --dusty-pink: #CA99AB;
+      --soft-blush: #E4CDDD;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--soft-blush);
+      color: var(--deep-burgundy);
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--dark-red);
+    }
+
+    header {
+      height: 100vh;
+      background: url('https://via.placeholder.com/1920x1080') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .logo {
+      max-width: 280px;
+      margin-bottom: 1rem;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .tagline {
+      font-size: 1.25rem;
+      color: var(--warm-rose);
+      font-style: italic;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    nav button {
+      background-color: transparent;
+      border: none;
+      font-size: 1rem;
+      margin: 0 0.5rem;
+      cursor: pointer;
+      color: var(--deep-burgundy);
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--warm-rose);
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .contact-form button {
+      padding: 1rem;
+      background-color: var(--dark-red);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: var(--warm-rose);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: var(--deep-burgundy);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo-wedding.png" alt="Anna-Maria logo" class="logo" />
+    <h1 data-en="A Hospitality Professional" data-de="Hospitality-Expertin" data-fr="Professionnelle de l'hospitalité" data-it="Professionista dell'ospitalità">A Hospitality Professional</h1>
+    <p class="tagline">Creating exceptional guest experiences with elegance and heart</p>
+    <nav>
+      <button onclick="setLang('en')">EN</button>
+      <button onclick="setLang('de')">DE</button>
+      <button onclick="setLang('fr')">FR</button>
+      <button onclick="setLang('it')">IT</button>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2 data-en="About Me" data-de="Über mich" data-fr="À propos de moi" data-it="Chi sono">About Me</h2>
+    <p data-en="I’ve always loved creating moments people remember—whether planning a dance show or organizing our graduation trip. Seeing others smile because of something I helped bring to life fills me with joy. Becoming a wedding planner feels like the perfect way to turn that passion into something truly meaningful."
+       data-de="Ich habe es schon immer geliebt, unvergessliche Momente zu schaffen – sei es beim Planen einer Tanzshow oder unserer Abschlussfahrt. Die Freude der anderen zu sehen, erfüllt mich mit Glück. Hochzeitsplanerin zu sein, ist für mich die perfekte Art, meine Leidenschaft zu leben."
+       data-fr="J’ai toujours aimé créer des moments inoubliables – qu’il s’agisse d’un spectacle de danse ou d’un voyage de fin d’études. Voir les gens sourire grâce à quelque chose que j’ai organisé me comble. Être wedding planner est la suite logique de cette passion."
+       data-it="Ho sempre amato creare momenti indimenticabili – che si tratti di uno spettacolo di danza o di un viaggio di laurea. Vedere le persone sorridere grazie a ciò che ho realizzato mi riempie di gioia. Fare la wedding planner è il modo perfetto per esprimere questa passione."
+    >I’ve always loved creating moments people remember...</p>
+  </section>
+
+  <section id="portfolio">
+    <h2 data-en="Portfolio" data-de="Portfolio" data-fr="Portfolio" data-it="Portfolio">Portfolio</h2>
+    <p data-en="Here are a few impressions of my work and style."
+       data-de="Hier finden Sie einige Eindrücke meiner Arbeit und meines Stils."
+       data-fr="Voici quelques impressions de mon travail et de mon style."
+       data-it="Ecco alcune impressioni del mio lavoro e del mio stile.">
+       Here are a few impressions of my work and style.
+    </p>
+    <img src="https://via.placeholder.com/800x500" alt="Wedding Setup" style="width:100%; border-radius: 10px; margin-top: 1rem;">
+  </section>
+
+  <section id="contact">
+    <h2 data-en="Contact Me" data-de="Kontakt" data-fr="Contact" data-it="Contatti">Contact Me</h2>
+    <form class="contact-form" action="https://formspree.io/f/moqggvdp" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Anna-Maria. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+    const revealOnScroll = () => {
+      const trigger = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < trigger) {
+          section.classList.add('visible');
+        }
+      });
+    };
+
+    function setLang(lang) {
+      document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang);
+      });
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', () => {
+      revealOnScroll();
+      setLang('en');
+    });
+  </script>
+</body>
+</html>
